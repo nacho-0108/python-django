@@ -1,0 +1,15 @@
+<h4>get 방식</h4>
+<form method="get">
+	<input type="text" name="userId" placeholder="input id"><br>
+	<input type="text" name="userpw" placeholder="input pw"><br>
+	<input type="submit" value="전송"><br>
+</form>
+<!-- get 방식의 경우 간단하고 보안이 따로 필요 없는 경우에 많이 사용 -->
+
+
+<h4>post 방식</h4>
+<form method="post">{% csrf_token %}
+	<input type="text" name="userId" placeholder="input id"><br>
+	<input type="text" name="userpw" placeholder="input pw"><br>
+	<input type="submit" value="전송"><br>
+</form>
