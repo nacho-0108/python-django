@@ -1,0 +1,19 @@
+<h4>phone index 페이지입니다</h4>
+
+<!-- 
+
+{% for i in info %}
+	{{i.id}}.<a href="http://127.0.0.1:8000/phonebook/detail/{{i.id}}">{{i.이름}}</a>: {{i.전화번호}} <br>
+{% endfor %}
+
+ -->
+
+{% for i in info %}
+	{{i.id}}.<a href="{% url 'PB:D' i.id %}">{{i.이름}}</a>: {{i.전화번호}} <br>
+{% endfor %}
+
+<!-- PB:D는 urls.py에서 app_Name과 details의 name을 따로 지정해줬기 때문에 가능 -->
+
+<hr>
+<button type="button"
+onclick="location.href='{% url 'PB:add' %}'">추가</button>

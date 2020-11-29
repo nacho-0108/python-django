@@ -1,0 +1,28 @@
+<h4>phone detail 페이지 입니다</h4>
+
+
+
+id: {{UserInfo.id}}<br>
+이름: {{UserInfo.이름}}<br>
+전화번호: {{UserInfo.전화번호}}<br>
+이메일: {{UserInfo.이메일}}<br>
+주소: {{UserInfo.주소}}<br>
+생년월일: {{UserInfo.생년월일}}<br>
+
+
+<br>
+
+
+
+<!-- 
+<input type="date" value="{{userInfo.생년월일 | date:'Y-m-d'}}">
+어떤 내용을 저장을 할때는 이러한 형식을 갖춰야함 -->
+
+
+<button onclick="location.href='{% url 'PB:index' %}'">
+메인
+</button>
+
+<button onclick="location.href='{% url 'PB:update' UserInfo.id %}'">
+수정
+</button>
